@@ -22,8 +22,8 @@ window.KNIT_RAIL_CONFIG = {
       },
       side: {
         src: 'assets/side/white.png',
-        hangPoint: {x: 169.89, y: 32},
-        bounds: {left: 32, right: 289, bottom: 968}
+        hangPoint: {x: 1467.19, y: 277},
+        bounds: {left: 1292, right: 1618, bottom: 1461}
       }
     },
     {
@@ -39,8 +39,8 @@ window.KNIT_RAIL_CONFIG = {
       },
       side: {
         src: 'assets/side/pink.png',
-        hangPoint: {x: 181.66, y: 33},
-        bounds: {left: 33, right: 313, bottom: 967}
+        hangPoint: {x: 1887.72, y: 274},
+        bounds: {left: 1708, right: 2047, bottom: 1405}
       }
     },
     {
@@ -56,8 +56,8 @@ window.KNIT_RAIL_CONFIG = {
       },
       side: {
         src: 'assets/side/yellow.png',
-        hangPoint: {x: 160.34, y: 32},
-        bounds: {left: 32, right: 283, bottom: 969}
+        hangPoint: {x: 771.44, y: 202},
+        bounds: {left: 607, right: 927, bottom: 1393}
       }
     },
     {
@@ -73,8 +73,8 @@ window.KNIT_RAIL_CONFIG = {
       },
       side: {
         src: 'assets/side/blue.png',
-        hangPoint: {x: 143.92, y: 32},
-        bounds: {left: 32, right: 264, bottom: 968}
+        hangPoint: {x: 1195.48, y: 232},
+        bounds: {left: 1055, right: 1346, bottom: 1404}
       }
     },
     {
@@ -90,8 +90,8 @@ window.KNIT_RAIL_CONFIG = {
       },
       side: {
         src: 'assets/side/brown.png',
-        hangPoint: {x: 138.34, y: 31},
-        bounds: {left: 32, right: 265, bottom: 969}
+        hangPoint: {x: 1009.86, y: 287},
+        bounds: {left: 872, right: 1172, bottom: 1491}
       }
     }
   ]
