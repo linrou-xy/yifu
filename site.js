@@ -1,6 +1,12 @@
 /* Shared chrome for every page: the green bar's menu opens as a sheet on
    narrow screens. Nothing here touches the rail itself. */
 (()=>{
+  if(new URLSearchParams(location.search).get('embed')==='1'){
+    document.body.dataset.embed='true';
+    addEventListener('wheel',event=>{
+      if(window.parent!==window)window.parent.postMessage({type:'story-chapter-wheel',deltaY:event.deltaY},'*');
+    },{passive:true});
+  }
   const head=document.querySelector('.site-head');
   const toggle=document.querySelector('#nav-toggle');
   const nav=document.querySelector('#site-nav');

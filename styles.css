@@ -31,7 +31,8 @@
 @media(max-width:700px){.detail-photo{padding:10px 12px 62px;}.detail-navigation{left:10px;right:10px;bottom:14px;gap:6px;}.detail-nav-button{width:36px;height:36px;font-size:17px;}#detail-count{font-size:9px;letter-spacing:.5px;}}
 @media(prefers-reduced-motion:reduce){.garment-body,.detail-photo img{will-change:auto;}.detail-nav-button{transition:none;}}
 /* iframe embeds keep the rack isolated from the host site's styles. */
-body[data-embed=true] .site-head,body[data-embed=true] footer,body[data-embed=true] .intro{display:none;}
+body[data-embed=true]{padding-top:0;overflow:hidden}
+body[data-embed=true] .site-head,body[data-embed=true] footer,body[data-embed=true] .intro,body[data-embed=true] .page-next{display:none;}
 .swatches{flex-wrap:wrap;max-width:min(400px,40vw);}
 .detail-nav-button[hidden]{display:none;}
 .detail-navigation[data-single=true]{justify-content:center;}
@@ -192,6 +193,12 @@ footer{height:26px;background:var(--ink);color:var(--paper)}
 .site-head{position:fixed;top:0;left:0;right:0;z-index:90;height:var(--head-h)}
 body{padding-top:var(--head-h)}
 .stage{position:relative;flex:1}
+
+html.home-scroll{scroll-snap-type:y mandatory;scroll-padding-top:var(--head-h);scroll-behavior:smooth}
+.home-scroll .panel-one,.home-scroll .panel-two,.home-scroll .story-chapter{scroll-snap-align:start;scroll-snap-stop:always}
+.story-chapter{position:relative;z-index:3;width:100%;height:calc(100svh - var(--head-h));overflow:hidden;background:var(--paper)}
+.story-chapter iframe{display:block;width:100%;height:100%;border:0;background:var(--paper)}
+body[data-embed=true] .editorial-shell,body[data-embed=true] .compare-shell,body[data-embed=true] .shop-shell{min-height:100svh}
 
 .panel-one{position:sticky;top:var(--head-h);height:calc(100svh - var(--head-h));display:flex;flex-direction:column;overflow:hidden;z-index:1;will-change:opacity,transform}
 .panel-one>main{min-height:0}

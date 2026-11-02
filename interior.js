@@ -48,7 +48,6 @@
     const side = document.querySelector('#shop-side');
     const name = document.querySelector('#shop-name');
     const copy = document.querySelector('#shop-description');
-    const link = document.querySelector('#shop-now');
     const selectColour = button => {
       const colour = button.dataset.shopColor;
       const product = products[colour];
@@ -56,9 +55,9 @@
       art.classList.add('is-changing');
       window.setTimeout(() => {
         shopFront.src = `assets/front/${colour}.png`; shopFront.alt = `${product.cn}牛津衬衫正面`;
-        side.src = `assets/side/${colour}.png`; side.alt = `${product.cn}牛津衬衫侧面`;
+        side.src = `assets/side/${colour}.png`; side.alt = `${product.cn}牛津衬衫侧面`; side.dataset.sideColor = colour;
         name.innerHTML = `${product.name}<br>¥ ${product.price}`;
-        copy.textContent = product.copy; link.href = `index.html?piece=${product.index}`;
+        copy.textContent = product.copy;
         art.classList.remove('is-changing');
       }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 150);
     };
