@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#00301a">
+  <title>Shop — The Oxford here and now</title>
+  <meta name="description" content="探索五种颜色的 GANT 牛津衬衫，选择颜色并查看正面与侧面。">
+  <link rel="preload" href="assets/fonts/GantSerif-MediumCondensed.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="pages.css"><script defer src="site.js"></script><script defer src="interior.js"></script>
+</head>
+<body class="interior-page shop-story-page">
+  <header class="site-head">
+    <a class="brand wordmark" href="index.html" aria-label="GANT 首页"><b>GANT</b><small>EST. NEW HAVEN</small></a>
+    <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false"><span>Menu</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航"><a href="index.html">THE SHIRT</a><a href="heritage.html">HERITAGE</a><a href="behind-the-garment.html">BEHIND THE GARMENT</a><a href="then-and-now.html">THEN / NOW</a><a href="shop.html" aria-current="page">SHOP</a><a class="nav-arrow" href="shop.html" aria-label="进入商店">↗</a></nav>
+  </header>
+  <main class="shop-shell">
+    <section class="shop-head" aria-labelledby="shop-title">
+      <div><p class="section-kicker"><span></span>05 / Shop the story</p><h1 id="shop-title">The Oxford<br>here and now.</h1></div>
+      <a class="explore-gant" href="index.html">Explore GANT <span>↗</span></a>
+    </section>
+    <section class="product-layout" aria-label="牛津衬衫颜色选择">
+      <div class="product-feature">
+        <div class="product-copy">
+          <p class="eyebrow">THE GANT OXFORD</p>
+          <h2>Made to be<br>worn your way.</h2>
+          <p id="shop-description">The butter yellow Oxford shirt at the heart of this story. Explore the details, then discover the GANT collection.</p>
+          <div class="shop-swatches" role="group" aria-label="选择颜色">
+            <button class="shop-swatch" style="--swatch:#fbe389" data-shop-color="yellow" aria-label="奶黄" aria-pressed="true"></button>
+            <button class="shop-swatch" style="--swatch:#d2e2f4" data-shop-color="blue" aria-label="晴空蓝" aria-pressed="false"></button>
+            <button class="shop-swatch" style="--swatch:#f8c3ce" data-shop-color="pink" aria-label="樱粉" aria-pressed="false"></button>
+            <button class="shop-swatch" style="--swatch:#efe9dc" data-shop-color="white" aria-label="月白" aria-pressed="false"></button>
+            <button class="shop-swatch" style="--swatch:#8b5535" data-shop-color="brown" aria-label="焦糖棕" aria-pressed="false"></button>
+          </div>
+          <a class="shop-now" id="shop-now" href="index.html?piece=2">Shop now <span>↗</span></a>
+        </div>
+        <div class="product-art" id="product-art"><img id="shop-front" src="assets/front/yellow.png" alt="奶黄牛津衬衫正面"></div>
+      </div>
+      <aside class="product-aside"><img id="shop-side" src="assets/side/yellow.png" alt="奶黄牛津衬衫侧面"><h3>The everyday layer</h3><p id="shop-name">Butter Yellow Oxford<br>¥ 569</p></aside>
+    </section>
+    <footer class="shop-footer"><span>GANT</span><span>The story inside the shirt · a campaign concept</span><a href="#shop-title">Back to the top ↑</a></footer>
+  </main>
+</body>
+</html>
