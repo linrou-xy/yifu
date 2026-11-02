@@ -20,7 +20,33 @@ test('every page exposes the approved five-route navigation', () => {
 test('homepage actions follow the Illustrator page map', () => {
   const html = read('index.html');
   assert.match(html, /READ THE STORY[\s\S]*?href="heritage\.html"|href="heritage\.html"[\s\S]*?READ THE STORY/);
-  assert.match(html, /SEE HOW IT IS MADE[\s\S]*?href="behind-the-garment\.html"|href="behind-the-garment\.html"[\s\S]*?SEE HOW IT IS MADE/);
+  assert.match(html, /SEE HOW IT IS MADE[\s\S]*?href="oxford-cloth\.html"|href="oxford-cloth\.html"[\s\S]*?SEE HOW IT IS MADE/);
+});
+
+test('canvas five is rebuilt as an Oxford cloth page', () => {
+  const html = read('oxford-cloth.html');
+  assert.match(html, /Where the Story Begins/);
+  assert.match(html, /Oxford Cloth/);
+  for (const image of [
+    'raw-cotton.jpg',
+    'carded-cotton.jpg',
+    'cloth-motion.jpg',
+    'cloth-factory.jpg',
+    'cloth-roll.jpg',
+  ]) {
+    assert.match(html, new RegExp(`assets/story/${image.replace('.', '\\.')}`));
+  }
+  assert.match(html, /Raw cotton is cleaned, spun into yarn, woven into Oxford cloth and carefully finished/);
+  assert.doesNotMatch(html, /class="cloth-next"/);
+  assert.match(html, /href="behind-the-garment\.html"/);
+  for (const route of pages) assert.match(html, new RegExp(`href=["']${route.replace('.', '\\.')}["']`));
+});
+
+test('discover call-to-action is a direct link to the supplied video', () => {
+  const html = read('index.html');
+  const app = read('app.js');
+  assert.match(html, /<a[^>]*id="discover"[^>]*href="assets\/yifu\.mp4"/);
+  assert.doesNotMatch(app, /querySelector\(['"]#discover['"]\)\.addEventListener/);
 });
 
 test('heritage contains the six artboard chapters', () => {

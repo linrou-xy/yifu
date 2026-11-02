@@ -194,9 +194,6 @@ showroom.addEventListener('pointerleave',()=>{clearHover();if(!rack.contains(doc
 swatches.addEventListener('pointerleave',()=>{if(!swatches.contains(document.activeElement)&&!detail.open)queueExit()});
 rack.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.repeat)return;pieces[e.key==='Home'?0:e.key==='End'?products.length-1:(Math.max(0,active)+(e.key==='ArrowRight'?1:products.length-1))%products.length].hit.focus()}else if(e.key==='Escape'){document.activeElement.blur();select(-1)}});
 document.querySelector('#reset').addEventListener('click',()=>{document.activeElement.blur();select(-1)});
-// The cover's "Discover the Oxford" button opens the card of whichever shirt
-// is currently turned forward, falling back to the first piece.
-document.querySelector('#discover').addEventListener('click',()=>openDetail(active>=0?active:0));
 const detail=document.querySelector('#detail'),detailImage=document.querySelector('#detail-image'),detailCopy=document.querySelector('.detail-copy');
 let detailIndex=0,displayedDetailIndex=0,detailRevision=0,detailAnimations=[],detailView='front';
 const selectedSizes=products.map(()=>'M');

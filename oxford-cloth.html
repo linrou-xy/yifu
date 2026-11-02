@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#00301a">
+  <title>Where the Story Begins — Oxford Cloth</title>
+  <meta name="description" content="从原棉、纺纱到织布，牛津衬衫的故事从一匹布开始。">
+  <link rel="preload" href="assets/fonts/GantSerif-MediumCondensed.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <script defer src="site.js"></script>
+</head>
+<body class="interior-page cloth-page">
+  <header class="site-head">
+    <a class="brand wordmark" href="index.html" aria-label="GANT 首页"><b>GANT</b><small>EST. NEW HAVEN</small></a>
+    <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false"><span>Menu</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <a href="index.html">THE SHIRT</a>
+      <a href="heritage.html">HERITAGE</a>
+      <a href="behind-the-garment.html" aria-current="page">BEHIND THE GARMENT</a>
+      <a href="then-and-now.html">THEN / NOW</a>
+      <a href="shop.html">SHOP</a>
+      <a class="nav-arrow" href="shop.html" aria-label="进入商店">↗</a>
+    </nav>
+  </header>
+
+  <main class="cloth-canvas">
+    <section class="cloth-intro" aria-labelledby="cloth-title">
+      <p>Where the Story Begins</p>
+      <h1 id="cloth-title"><span></span>Oxford Cloth</h1>
+      <div class="cloth-copy">
+        <p>Every Oxford shirt begins long before the first stitch. Raw cotton is cleaned, spun into yarn, woven into Oxford cloth and carefully finished to create its distinctive texture, strength and breathable feel. Each stage shapes the character of the fabric — turning simple fibres into the foundation of a shirt designed to be worn, lived in and remembered.</p>
+      </div>
+    </section>
+
+    <figure class="cloth-mosaic" aria-label="原棉经过梳理、纺织并制成牛津布的过程">
+      <div class="cloth-mosaic-column cloth-mosaic-left">
+        <img class="cloth-shot" src="assets/story/raw-cotton.jpg" alt="未经纺织的原棉纤维">
+        <img class="cloth-shot" src="assets/story/carded-cotton.jpg" alt="机器正在梳理蓬松的棉纤维">
+        <img class="cloth-shot" src="assets/story/cloth-motion.jpg" alt="纺织设备高速运行中的布料">
+      </div>
+      <div class="cloth-mosaic-column cloth-mosaic-right">
+        <img class="cloth-shot" src="assets/story/cloth-factory.jpg" alt="整排纺织机器工作的车间">
+        <img class="cloth-shot" src="assets/story/cloth-roll.jpg" alt="机器上展开的成匹牛津布">
+      </div>
+    </figure>
+  </main>
+</body>
+</html>
